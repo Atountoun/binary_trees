@@ -29,18 +29,25 @@ int main(void)
 {
 	binary_tree_t *root;
 
-	root = binary_tree_node(NULL, 98);
-	root->left = binary_tree_node(root, 12);
-	root->right = binary_tree_node(root, 402);
-	root->left->right = binary_tree_node(root->left, 54);
-	root->right->right = binary_tree_node(root->right, 128);
-	root->left->left = binary_tree_node(root->left, 10);
-	root->right->left = binary_tree_node(root->right, 45);
-	root->right->right->left = binary_tree_node(root->right->right, 92);
-	root->right->right->right = binary_tree_node(root->right->right, 65);
+	root = binary_tree_node(NULL, 70);
+	root->left = binary_tree_node(root, 50);
+	root->right = binary_tree_node(root, 90);
+	root->left->left = binary_tree_node(root->left, 40);
+	root->left->right = binary_tree_node(root->left, 60);
+	root->right->left = binary_tree_node(root->right, 80);
+	root->right->right = binary_tree_node(root->right, 110);
+	root->right->right->left = binary_tree_node(root->right->right, 105);
+	root->right->right->right = binary_tree_node(root->right->right, 120);
+	root->right->left->left = binary_tree_node(root->right->left, 75);
+	root->right->left->right = binary_tree_node(root->right->left, 85);
+	root->left->right->left = binary_tree_node(root->left->right, 55);
+	root->left->right->right = binary_tree_node(root->left->right, 65);
+	root->left->left->left = binary_tree_node(root->left->left, 35);
+	root->left->left->right = binary_tree_node(root->left->left, 45);
+
 	binary_tree_print(root);
 
-	launch_test(root->left, root->right);
+	launch_test(root->left, root->left);
 	launch_test(root->right->left, root->right->right->right);
 	launch_test(root->right->right, root->right->right->right);
 
