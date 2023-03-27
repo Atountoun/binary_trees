@@ -48,6 +48,8 @@ bst_t *bst_insert(bst_t **tree, int value)
 			prev->left = node;
 		else if (value > prev->n)
 			prev->right = node;
+		else
+			free(node);
 	}
 
 	return (node);
